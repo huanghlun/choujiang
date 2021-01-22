@@ -1,5 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  /* background-color: #9a231a; */
+  background-color: #f4f5f5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px;
 }
 
 .App-logo {
@@ -35,4 +57,182 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  /* background-color: #20232a; */
+  background-color: #9a231a;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding: 0px 80px;
+  text-align: right;
+}
+
+.header-text {
+  display: inline-block;
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.lottery-card,
+.member-card {
+  margin: 0px auto;
+  width: 600px;
+  /* height: 300px; */
+  /* border-radius: 10px; */
+  box-shadow: 0px 0px 10px rgba(200, 200, 200, 0.2);
+  background-color: white;
+  padding: 20px 0px;
+  flex: "none";
+}
+
+.lottery-image-list {
+  margin: 20px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottery-image {
+  margin-right: 20px;
+  flex: none;
+  width: 120px;
+  height: auto;
+}
+
+.lottery-number {
+  width: 500px;
+  margin: 0px auto;
+  height: 56px;
+  line-height: 56px;
+  font-size: 36px;
+  /* background-color: #333; */
+  background-color: #9a231a;
+  color: white;
+  inset: 4px 8px;
+  margin-bottom: 20px;
+}
+
+.lottery-name {
+  height: 56px;
+  line-height: 56px;
+  font-size: 36px;
+  color: #b22b20;
+  margin-bottom: 20px;
+}
+
+.lottery-button {
+  display: inline-block;
+  padding: 5px 12px;
+  height: 40px;
+  margin: 0px 20px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #b22b20;
+  color: #b22b20;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lottery-button:active,
+.lottery-button:focus,
+.lottery-button:hover,
+.lottery-button:visited {
+  border: 1px solid #b22b20;
+  color: #b22b20;
+  outline: none;
+}
+
+.lottery-button:hover {
+  box-shadow: 0px 0px 5px rgba(178, 43, 32, 0.5);
+}
+
+.lottery-button:disabled {
+  color: rgba(16, 16, 16, 0.3);
+  background-color: rgba(239, 239, 239, 0.3);
+  border-color: rgba(118, 118, 118, 0.3);
+  cursor: not-allowed;
+}
+
+.member-card {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  color: #444;
+}
+
+.member-info {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.member-item {
+  flex: none;
+}
+
+.member-item:first-child {
+  margin-right: 8px;
+}
+
+.final-info {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  font-size: 16px;
+  border-bottom: 1px dashed rgba(200, 200, 200, 0.8);
+  color: #444;
+  font-size: 18px;
+}
+
+.final-info:last-child {
+  border-bottom-style: none;
+}
+
+.final-price-name {
+  flex: none;
+  width: 120px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+.final-price-member-container {
+  flex: 1;
+  white-space: normal;
+  text-align: left;
+}
+
+.final-price-member {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.lottery-title {
+  font-size: 32px;
+  /* color: #b22b20; */
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.lottery-subtitle {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
 }

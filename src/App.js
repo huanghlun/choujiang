@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useCallback, useEffect, useRef, useState } from "react";
+import Lottery from "./Lottery";
+import MemberList from "./MemberList";
+import Header from "./Header";
 
 function App() {
+  const [pageId, setPageId] = useState(0);
+  const handleClickHeader = (id) => {
+    setPageId(id);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header onClick={handleClickHeader} />
+      {pageId == 0 ? <Lottery /> : <MemberList />}
     </div>
   );
 }
