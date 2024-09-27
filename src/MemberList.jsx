@@ -9,11 +9,11 @@ export default class MemberList extends React.PureComponent {
 
   render() {
     return (
-      <div className="member-card">
+      <div className="member-card" style={{ height: "600px" }}>
         {memberList.map((obj) => {
           return (
-            <div className="member-info" key={obj.companyNo}>
-              <p className="member-item">{obj.companyNo}</p>
+            <div className="member-info" key={obj.name}>
+              {/* <p className="member-item">{obj.companyNo}</p> */}
               <p className="member-item">{obj.name}</p>
             </div>
           );
